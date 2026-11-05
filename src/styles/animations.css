@@ -1,0 +1,154 @@
+/* ============================================
+   Keno20 — Animations & Keyframes
+   ============================================ */
+
+/* === Fade In === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* === Pulse Glow (matched multiplier) === */
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 4px #0fbe5a;
+  }
+  100% {
+    transform: scale(1.08);
+    box-shadow: 0 0 16px #0fbe5a;
+  }
+}
+
+.pulse-glow {
+  animation: pulseGlow 1s infinite alternate;
+}
+
+/* === Pop In === */
+@keyframes popIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* === Fade Out === */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* === Spin (loading spinner) === */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* === Coin Fall === */
+@keyframes coinFall {
+  0% {
+    transform: translateY(-60px) rotate(0deg) translateX(0px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg) translateX(var(--wobble, 30px));
+    opacity: 0;
+  }
+}
+
+/* === Glow Pulse (popup, bet button) === */
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 20px rgba(212, 168, 67, 0.3), 0 0 60px rgba(212, 168, 67, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 40px rgba(212, 168, 67, 0.5), 0 0 100px rgba(212, 168, 67, 0.2);
+  }
+}
+
+/* === Shimmer (bet button) === */
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* === Confetti Burst === */
+@keyframes confettiPiece {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--tx), var(--ty)) rotate(var(--rot)) scale(0);
+    opacity: 0;
+  }
+}
+
+/* === Scale In (modal) === */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* === Cell Reveal Pop === */
+@keyframes cellPop {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* === Gold Shimmer Text === */
+@keyframes goldShimmer {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}

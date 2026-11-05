@@ -1,0 +1,28 @@
+/* ============================================
+   Keno20 — Grid & Canvas Styles
+   ============================================ */
+
+.keno20-grid-canvas-container {
+  background: var(--bg-surface);
+  border: var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-card);
+  position: relative;
+}
+
+.keno20-grid-canvas-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 12px;
+  right: 12px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 168, 67, 0.4), transparent);
+}
+
+.keno20-canvas {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  display: block;
+}

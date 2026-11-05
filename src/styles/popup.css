@@ -1,0 +1,210 @@
+/* ============================================
+   Keno20 — Popup & Coins Effect Styles
+   ============================================ */
+
+/* === Overlay === */
+.keno20-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(4, 4, 12, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  backdrop-filter: blur(12px);
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* === Main Popup Card === */
+.keno20-popup-content {
+  background: linear-gradient(180deg, #141829 0%, #0e1023 100%);
+  color: var(--text-primary);
+  padding: 32px 28px;
+  border-radius: var(--radius-xl);
+  border: 2px solid var(--gold-primary);
+  box-shadow:
+    0 0 40px rgba(212, 168, 67, 0.3),
+    0 0 100px rgba(212, 168, 67, 0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 420px;
+  animation: popIn 0.4s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* === Corner Ornaments === */
+.keno20-popup-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    linear-gradient(135deg, rgba(212, 168, 67, 0.15) 0%, transparent 3%, transparent 97%, rgba(212, 168, 67, 0.15) 100%),
+    linear-gradient(225deg, rgba(212, 168, 67, 0.15) 0%, transparent 3%, transparent 97%, rgba(212, 168, 67, 0.15) 100%);
+  pointer-events: none;
+}
+
+/* === Win Glow Pulse === */
+.keno20-popup-content.win {
+  animation: popIn 0.4s ease-out, glowPulse 1.5s ease-in-out infinite alternate;
+}
+
+/* === Lose State === */
+.keno20-popup-content.lose {
+  border-color: rgba(120, 120, 120, 0.5);
+  box-shadow: 0 0 30px rgba(180, 30, 40, 0.2);
+}
+
+/* === Header === */
+.keno20-popup-header h3 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 28px;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.keno20-popup-header h3.win-title {
+  background: var(--gold-gradient-horizontal);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: goldShimmer 2s linear infinite;
+}
+
+.keno20-popup-header h3.lose-title {
+  color: var(--text-secondary);
+  font-size: 24px;
+}
+
+/* === Body === */
+.keno20-popup-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.keno20-highlight {
+  font-weight: 600;
+  color: var(--text-gold);
+  font-family: var(--font-display);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* === Winning Number Pills === */
+.keno20-winning-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.keno20-number-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--gold-primary);
+  background: rgba(212, 168, 67, 0.1);
+  color: var(--text-gold);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 0 10px rgba(212, 168, 67, 0.2);
+}
+
+/* === Payout Display === */
+.keno20-payout-display {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 36px;
+  color: var(--text-gold);
+  text-shadow: 0 0 20px rgba(212, 168, 67, 0.5);
+}
+
+.keno20-payout-display .currency {
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 2px;
+}
+
+/* === Coins Container === */
+.coins-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 10000;
+}
+
+.coin {
+  position: absolute;
+  top: -60px;
+  width: 28px;
+  height: 28px;
+  background-image: url("../assets/coin.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  --wobble: 40px;
+  animation: coinFall linear forwards;
+  opacity: 0;
+}
+
+.coin.emerald-coin {
+  background-image: none;
+  background: radial-gradient(circle at 40% 40%, #3dfc8e, #0a7a38);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(15, 190, 90, 0.5);
+}
+
+/* === Confetti === */
+.confetti-piece {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  z-index: 10001;
+  pointer-events: none;
+  animation: confettiPiece 0.9s ease-out forwards;
+}
+
+.confetti-piece.gold {
+  background: var(--gold-primary);
+  box-shadow: 0 0 4px var(--gold-light);
+}
+
+.confetti-piece.emerald {
+  background: var(--emerald-primary);
+  box-shadow: 0 0 4px var(--emerald-light);
+}
+
+.confetti-piece.diamond {
+  width: 6px;
+  height: 6px;
+  transform: rotate(45deg);
+  background: #fff;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+}
+
+/* === Hiding overlay === */
+.popup-overlay.hiding {
+  animation: fadeOut 0.5s ease-out;
+}

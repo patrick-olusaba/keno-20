@@ -1,0 +1,112 @@
+/* ============================================
+   Keno20 — Game History Styles
+   ============================================ */
+
+.keno20-history {
+  width: 100%;
+  background: var(--bg-surface);
+  border: var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  margin-top: var(--space-sm);
+  box-shadow: var(--shadow-card);
+  position: relative;
+}
+
+.keno20-history::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 12px;
+  right: 12px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 168, 67, 0.4), transparent);
+}
+
+.keno20-history-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--text-gold);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+.history-container {
+  max-height: 200px;
+  overflow-y: auto;
+  border: var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 2px;
+}
+
+/* === Table === */
+.keno20-history table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 2px;
+}
+
+.keno20-history th {
+  background: var(--bg-primary);
+  color: var(--text-gold);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 8px 6px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.keno20-history td {
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 13px;
+  padding: 7px 6px;
+  text-align: center;
+  background: var(--bg-surface);
+  transition: background var(--transition-fast);
+}
+
+.keno20-history tbody tr:nth-child(even) td {
+  background: var(--bg-elevated);
+}
+
+.keno20-history tbody tr:hover td {
+  background: rgba(212, 168, 67, 0.05);
+}
+
+/* === Win/Lose Amounts === */
+.win-amount {
+  color: var(--text-emerald) !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 8px rgba(15, 190, 90, 0.4);
+}
+
+.lose-amount {
+  color: var(--danger) !important;
+  font-weight: 600 !important;
+}
+
+/* === Loading Spinner === */
+.keno20-loading-spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.keno20-loading-spinner {
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-top-color: var(--gold-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}

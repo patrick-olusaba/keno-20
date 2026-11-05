@@ -1,0 +1,100 @@
+/* ============================================
+   Keno20 — Responsive Styles
+   ============================================ */
+
+/* === Base Game Container === */
+.keno20-game-container {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-deepest);
+  font-family: var(--font-body);
+  min-height: 100vh;
+}
+
+.keno20-game-area {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.game-hist-controls {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* === Mobile Layout (< 700px) === */
+@media (max-width: 699px) {
+  .keno20-game-area {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .game-hist-controls {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .keno20-grid-canvas-container {
+    width: 100%;
+    margin-bottom: var(--space-sm);
+  }
+
+  .keno20-canvas {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .keno20-multiplier-grid {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 6px;
+  }
+
+  .keno20-multiplier-box {
+    padding: 8px 4px;
+    font-size: 9px;
+  }
+}
+
+/* === Desktop Layout (>= 700px) === */
+@media (min-width: 700px) {
+  .keno20-game-area {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: var(--space-md);
+  }
+
+  .keno20-grid-canvas-container {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .game-hist-controls {
+    width: 320px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* === Tablet Adjustments === */
+@media (min-width: 700px) and (max-width: 1024px) {
+  .game-hist-controls {
+    width: 280px;
+  }
+
+  .keno20-multiplier-grid {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  }
+}
+
+/* === Large Desktop (>= 1025px) === */
+@media (min-width: 1025px) {
+  .keno20-game-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: var(--space-md);
+  }
+}

@@ -1,0 +1,174 @@
+<svg viewBox="0 0 560 140" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Text gradients for 3D effect -->
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="30%" stop-color="#ffd700"/>
+      <stop offset="70%" stop-color="#ff6b35"/>
+      <stop offset="100%" stop-color="#e91e63"/>
+    </linearGradient>
+    
+    <!-- Main ball gradient -->
+    <radialGradient id="mainBallGradient" cx="0.3" cy="0.3" r="0.9">
+      <stop offset="0%" stop-color="#ff6b35"/>
+      <stop offset="30%" stop-color="#e91e63"/>
+      <stop offset="70%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#673ab7"/>
+    </radialGradient>
+    
+    <!-- Small ball gradients - different colors -->
+    <radialGradient id="ball1" cx="0.3" cy="0.3" r="0.8">
+      <stop offset="0%" stop-color="#4ecdc4"/>
+      <stop offset="100%" stop-color="#26a69a"/>
+    </radialGradient>
+    
+    <radialGradient id="ball2" cx="0.3" cy="0.3" r="0.8">
+      <stop offset="0%" stop-color="#ffd54f"/>
+      <stop offset="100%" stop-color="#ffa000"/>
+    </radialGradient>
+    
+    <radialGradient id="ball3" cx="0.3" cy="0.3" r="0.8">
+      <stop offset="0%" stop-color="#81c784"/>
+      <stop offset="100%" stop-color="#4caf50"/>
+    </radialGradient>
+    
+    <radialGradient id="ball4" cx="0.3" cy="0.3" r="0.8">
+      <stop offset="0%" stop-color="#f06292"/>
+      <stop offset="100%" stop-color="#e91e63"/>
+    </radialGradient>
+    
+    <radialGradient id="ball5" cx="0.3" cy="0.3" r="0.8">
+      <stop offset="0%" stop-color="#64b5f6"/>
+      <stop offset="100%" stop-color="#2196f3"/>
+    </radialGradient>
+    
+    <radialGradient id="ball6" cx="0.3" cy="0.3" r="0.8">
+      <stop offset="0%" stop-color="#ba68c8"/>
+      <stop offset="100%" stop-color="#9c27b0"/>
+    </radialGradient>
+    
+    <radialGradient id="ball7" cx="0.3" cy="0.3" r="0.8">
+      <stop offset="0%" stop-color="#ffb74d"/>
+      <stop offset="100%" stop-color="#ff9800"/>
+    </radialGradient>
+    
+    <radialGradient id="ball8" cx="0.3" cy="0.3" r="0.8">
+      <stop offset="0%" stop-color="#a5d6a7"/>
+      <stop offset="100%" stop-color="#66bb6a"/>
+    </radialGradient>
+    
+    <!-- Ball glow -->
+    <radialGradient id="ballGlow" cx="0.5" cy="0.5" r="0.8">
+      <stop offset="0%" stop-color="#ff6b35" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#9c27b0" stop-opacity="0.1"/>
+    </radialGradient>
+    
+    <!-- Number background -->
+    <radialGradient id="numberBg" cx="0.5" cy="0.5" r="0.8">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8f8ff"/>
+    </radialGradient>
+    
+    <!-- Drop shadow filter -->
+    <filter id="dropShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="4" dy="6" stdDeviation="4" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+    
+    <!-- Text shadow filter -->
+    <filter id="textShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+  
+  <!-- Small colorful balls scattered around -->
+  <circle cx="30" cy="30" r="12" fill="url(#ball1)" filter="url(#dropShadow)">
+    <animate attributeName="cy" values="30;36;30" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="30" cy="30" r="6" fill="url(#numberBg)" opacity="0.9"/>
+  <text x="30" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#26a69a">5</text>
+  
+  <circle cx="70" cy="110" r="10" fill="url(#ball2)" filter="url(#dropShadow)">
+    <animate attributeName="cy" values="110;104;110" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="70" cy="110" r="5" fill="url(#numberBg)" opacity="0.9"/>
+  <text x="70" y="114" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#ffa000">12</text>
+  
+  <circle cx="330" cy="24" r="14" fill="url(#ball3)" filter="url(#dropShadow)">
+    <animate attributeName="cy" values="24;30;24" dur="2.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="330" cy="24" r="7" fill="url(#numberBg)" opacity="0.9"/>
+  <text x="330" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#4caf50">7</text>
+  
+  <circle cx="360" cy="116" r="12" fill="url(#ball4)" filter="url(#dropShadow)">
+    <animate attributeName="cy" values="116;110;116" dur="3.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="360" cy="116" r="6" fill="url(#numberBg)" opacity="0.9"/>
+  <text x="360" y="122" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e91e63">3</text>
+  
+  <!-- Number 18 ball -->
+  <circle cx="520" cy="30" r="10" fill="url(#ball5)" filter="url(#dropShadow)">
+    <animate attributeName="cy" values="30;36;30" dur="2.3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="520" cy="30" r="5" fill="url(#numberBg)" opacity="0.9"/>
+  <text x="520" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#2196f3">18</text>
+  
+  <!-- Additional tiny balls -->
+  <circle cx="110" cy="40" r="8" fill="url(#ball6)" filter="url(#dropShadow)">
+    <animate attributeName="cy" values="40;34;40" dur="2.7s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="110" cy="40" r="4" fill="url(#numberBg)" opacity="0.9"/>
+  <text x="110" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#9c27b0">9</text>
+  
+  <circle cx="240" cy="24" r="8" fill="url(#ball7)" filter="url(#dropShadow)">
+    <animate attributeName="cy" values="24;30;24" dur="3.1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="240" cy="24" r="4" fill="url(#numberBg)" opacity="0.9"/>
+  <text x="240" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#ff9800">14</text>
+  
+  <circle cx="280" cy="120" r="8" fill="url(#ball8)" filter="url(#dropShadow)">
+    <animate attributeName="cy" values="120;114;120" dur="2.9s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="280" cy="120" r="4" fill="url(#numberBg)" opacity="0.9"/>
+  <text x="280" y="124" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#66bb6a">1</text>
+  
+  <!-- Improved number 6 ball -->
+  <circle cx="50" cy="70" r="6" fill="url(#ball1)" filter="url(#dropShadow)">
+    <animate attributeName="cy" values="70;64;70" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="50" cy="70" r="3" fill="url(#numberBg)" opacity="0.9"/>
+  <text x="50" y="74" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" font-weight="bold" fill="#26a69a">6</text>
+  
+  <!-- Improved number 11 ball -->
+  <circle cx="500" cy="100" r="6" fill="url(#ball4)" filter="url(#dropShadow)">
+    <animate attributeName="cy" values="100;106;100" dur="2.6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="500" cy="100" r="3" fill="url(#numberBg)" opacity="0.9"/>
+  <text x="500" y="103" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" font-weight="bold" fill="#e91e63">11</text>
+  
+  <!-- Main keno ball -->
+  <circle cx="440" cy="70" r="56" fill="url(#mainBallGradient)" filter="url(#dropShadow)"/>
+  <circle cx="440" cy="70" r="52" fill="url(#ballGlow)"/>
+  
+  <!-- Number background circle -->
+  <circle cx="440" cy="70" r="32" fill="url(#numberBg)" stroke="#ff6b35" stroke-width="2" opacity="0.9"/>
+  
+  <!-- Ball number -->
+  <text x="440" y="86" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#673ab7">20</text>
+  
+  <!-- Main KENO text with colorful 3D effect -->
+  <text x="130" y="76" font-family="Arial, sans-serif" font-size="64" font-weight="900" fill="url(#textGradient)" filter="url(#textShadow)" letter-spacing="4px">KENO</text>
+  
+  <!-- PRO subtitle -->
+  <text x="134" y="116" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="url(#textGradient)" filter="url(#textShadow)" letter-spacing="2px">PRO</text>
+  
+  <!-- Additional sparkle effects -->
+  <circle cx="280" cy="50" r="3" fill="#ffd700" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.3;0.8" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="400" cy="30" r="2" fill="#ff6b35" opacity="0.9">
+    <animate attributeName="opacity" values="0.9;0.4;0.9" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="290" cy="100" r="2.4" fill="#4ecdc4" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;0.2;0.7" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>

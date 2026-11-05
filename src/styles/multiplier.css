@@ -1,0 +1,123 @@
+/* ============================================
+   Keno20 — Multiplier Display Styles
+   ============================================ */
+
+.keno20-multiplier-display {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--bg-surface);
+  border: var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  margin-top: var(--space-sm);
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  position: relative;
+}
+
+.keno20-multiplier-display::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 12px;
+  right: 12px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 168, 67, 0.4), transparent);
+}
+
+.keno20-multiplier-display > span:first-child {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--text-gold);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.keno-no-selection {
+  font-size: 12px;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  font-style: italic;
+  font-family: var(--font-body);
+}
+
+.keno-multiplier-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  gap: 8px;
+}
+
+.keno-multiplier-box {
+  background: var(--bg-elevated);
+  border: var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 10px 6px;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  transition: background var(--transition-normal),
+              transform var(--transition-normal),
+              border-color var(--transition-normal),
+              box-shadow var(--transition-normal);
+}
+
+.keno-multiplier-box:hover {
+  border-color: rgba(212, 168, 67, 0.3);
+}
+
+.keno-match-count {
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  color: var(--text-secondary);
+  font-family: var(--font-display);
+}
+
+.keno-match-count span:first-child {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.keno-matches {
+  font-size: 9px;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+}
+
+.keno-multiplier-value {
+  font-size: 13px;
+  color: var(--text-gold);
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+/* === Highlighted (current match count) === */
+.highlight-multiplier {
+  background: var(--emerald-gradient) !important;
+  border-color: var(--emerald-light) !important;
+  color: #000;
+  font-weight: bold;
+  transform: scale(1.1);
+  box-shadow: 0 0 18px rgba(15, 190, 90, 0.5);
+}
+
+.highlight-multiplier .keno-match-count span:first-child {
+  color: #000;
+}
+
+.highlight-multiplier .keno-match-count .keno-matches {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.highlight-multiplier .keno-multiplier-value {
+  color: #000;
+  font-weight: 800;
+}

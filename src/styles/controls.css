@@ -1,0 +1,255 @@
+/* ============================================
+   Keno20 — Bet Controls Styles
+   ============================================ */
+
+.keno20-controls-main-container {
+  background: var(--bg-surface);
+  border: var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-card);
+  position: relative;
+}
+
+.keno20-controls-main-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 12px;
+  right: 12px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 168, 67, 0.4), transparent);
+}
+
+.keno20-bet-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--text-gold);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* === Quick Bet Shortcuts === */
+.keno20-controls-shortcuts-container {
+  display: flex;
+  flex-direction: row;
+  background: var(--bg-elevated);
+  padding: 3px;
+  border-radius: var(--radius-md);
+  gap: 3px;
+  align-items: center;
+  margin-bottom: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.keno20-controls-shortcuts {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  background: var(--bg-primary);
+  padding: 3px;
+  border-radius: var(--radius-sm);
+  gap: 4px;
+}
+
+.keno20-controls-shortcuts-btn {
+  flex: 1;
+  background: var(--bg-deepest);
+  padding: 10px 4px;
+  color: var(--text-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 13px;
+  transition: all var(--transition-fast);
+}
+
+.keno20-controls-shortcuts-btn:hover {
+  border-color: var(--gold-primary);
+  color: var(--text-gold);
+}
+
+.keno20-shortcuts-select {
+  background: var(--gold-gradient) !important;
+  color: var(--bg-deepest) !important;
+  font-weight: 700 !important;
+  border: 1px solid var(--gold-light) !important;
+  box-shadow: 0 0 12px rgba(212, 168, 67, 0.3);
+}
+
+/* === Input Container === */
+.keno20-controls-input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+  background: var(--bg-primary);
+  border-radius: var(--radius-sm);
+  padding: 3px;
+}
+
+.keno20-controls-plus-minus {
+  width: 32px;
+  background: var(--bg-elevated);
+  padding: 10px 0;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  user-select: none;
+}
+
+.keno20-controls-plus-minus:hover {
+  border-color: var(--gold-primary);
+  color: var(--text-gold);
+  background: var(--bg-surface);
+}
+
+.keno20-controls-input {
+  background: transparent;
+  width: 40px;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 2px solid rgba(212, 168, 67, 0.3);
+  text-align: center;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 15px;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.keno20-controls-input:focus {
+  border-bottom-color: var(--gold-primary);
+}
+
+/* === Action Buttons Row === */
+.keno20-controls-btn-container {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+/* === Clear Button === */
+.clear-button {
+  flex: 1;
+  padding: 12px 0;
+  background: var(--danger-gradient);
+  color: #fff;
+  font-size: 13px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all var(--transition-fast);
+  box-shadow: 0 2px 8px rgba(224, 36, 63, 0.3);
+}
+
+.clear-button:hover {
+  background: #f0304a;
+  box-shadow: 0 4px 14px rgba(224, 36, 63, 0.45);
+  transform: translateY(-1px);
+}
+
+/* === Auto Pick Button === */
+.auto-picker-button {
+  flex: 1;
+  padding: 12px 0;
+  background: var(--bg-elevated);
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  cursor: pointer;
+  border: var(--border-subtle);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all var(--transition-fast);
+}
+
+.auto-picker-button:hover {
+  border-color: var(--gold-primary);
+  color: var(--text-gold);
+  background: var(--bg-surface);
+}
+
+.auto-picker-button.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* === Bet Button === */
+.keno-bet-button {
+  width: 100%;
+  padding: 14px 0;
+  margin-top: var(--space-sm);
+  background: var(--gold-gradient);
+  color: var(--bg-deepest);
+  font-size: 16px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 0 24px rgba(212, 168, 67, 0.35);
+  transition: all var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.keno-bet-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+.keno-bet-button:hover {
+  box-shadow: 0 0 40px rgba(212, 168, 67, 0.55);
+  transform: translateY(-2px);
+}
+
+.keno-bet-button:active {
+  transform: translateY(0);
+}
+
+.keno-bet-button.disabled {
+  background: var(--neutral);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.5;
+}
+
+.keno-bet-button.disabled::after {
+  display: none;
+}

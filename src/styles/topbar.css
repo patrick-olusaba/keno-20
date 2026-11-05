@@ -1,0 +1,133 @@
+/* ============================================
+   Keno20 — Top Bar Styles
+   ============================================ */
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+  border-bottom: var(--border-subtle);
+  color: var(--text-primary);
+  padding: var(--space-sm) var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+.top-left,
+.top-center,
+.top-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.top-left {
+  justify-content: flex-start;
+}
+
+.top-center {
+  justify-content: center;
+}
+
+.top-right {
+  justify-content: flex-end;
+  font-weight: bold;
+}
+
+/* === Logo === */
+.keno-logo {
+  max-height: 50px;
+  width: auto;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5));
+}
+
+/* === Balance Chip === */
+.keno20-balance-chip {
+  display: flex;
+  align-items: center;
+  background: rgba(212, 168, 67, 0.08);
+  border: var(--border-gold);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text-gold);
+  white-space: nowrap;
+}
+
+.keno20-balance-chip .currency {
+  font-size: 11px;
+  margin-right: 2px;
+  opacity: 0.7;
+}
+
+/* === Settings Buttons === */
+.settings {
+  display: flex;
+  gap: var(--space-sm);
+  flex: 1;
+}
+
+.settings button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 1.1rem;
+  border: var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background: var(--bg-elevated);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background-color var(--transition-normal),
+              color var(--transition-normal),
+              border-color var(--transition-normal),
+              transform var(--transition-fast);
+}
+
+.settings button:hover {
+  background: var(--bg-surface);
+  color: var(--gold-primary);
+  border-color: var(--gold-primary);
+  transform: translateY(-2px);
+}
+
+.settings button svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* === Mobile === */
+@media (max-width: 600px) {
+  .keno-logo {
+    max-height: 40px;
+  }
+
+  .settings button {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+
+  .keno20-balance-chip {
+    font-size: 14px;
+    padding: 4px 12px;
+  }
+}
+
+@media (max-width: 699px) {
+  .top-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+  }
+
+  .keno-logo {
+    width: 120px;
+    height: 40px;
+  }
+}
